@@ -1,0 +1,235 @@
+\documentclass[11pt]{article}% uses letterpaper by default
+
+%---------- Uncomment one of them ------------------------------
+\usepackage[includeheadfoot, top=0.5in, bottom=0.5in, hmargin=1in]{geometry}
+
+% \usepackage[a5paper, landscape, twocolumn, twoside,
+%    left=2cm, hmarginratio=2:1, includemp, marginparwidth=43pt,
+%    bottom=1cm, foot=.7cm, includefoot, textheight=11cm, heightrounded,
+%    columnsep=1cm, dvips,  verbose]{geometry}
+%---------------------------------------------------------------
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{graphicx}
+\usepackage{varwidth}
+
+\usepackage{amsmath}
+
+% -----------------------------
+% Personal config (AT, Sp 2019)
+% -----------------------------
+\newcommand{\labnumber}{10}  % UPDATE THIS!
+\usepackage{enumitem}  % allow one to resume enumerate
+
+% custom figure captioning for floats..
+\usepackage[font=small,labelfont=bf]{caption}
+
+\usepackage[colorlinks=true,urlcolor=magenta,linkcolor=blue]{hyperref}
+% urlcolor = URL links, linkcolor = within-PDF links
+
+\newcommand*{\mt}{\mathrm}
+\newcommand*{\unit}[1]{\;\mathrm{#1}}  % vemod.net/typesetting-units-in-latex
+\newcommand*{\abt}{\mathord{\sim}} % tex.stackexchange.com/q/55701
+\newcommand*{\Msun}{\mathrm{M}_{\sun}}
+
+% Compact spacing
+\setlength\parindent{0pt}
+\setlength{\parskip}{0.5em}
+
+\usepackage{datetime2}  % customize \today, defaults to yyyy-mm-dd
+\lhead{}
+\chead{}
+\rhead{}
+\renewcommand{\rightmark}{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\lfoot{\today}  % WARNING - must print day _of_ lab
+%\cfoot{\thepage}
+% -----------------------------
+% End personal config (AT, Sp 2019)
+% -----------------------------
+
+\begin{document}
+
+\begin{center}
+\Large\textbf{Presentations}
+\end{center}
+
+\textbf{When:} Monday, December 6th at 6-9 pm. \\
+\textbf{Duration:} $\approx$ 10-13 min, then 0-5 min for
+questions/discussion. \\
+\textbf{Format:} any combination of slides and/or whiteboard.
+Email slides to me before class starts on December 6th. \\
+\textbf{Preparation:} 3--6 hours of effort, see next page for details.
+Class replaced with open office hour on November 29, where you may come and
+discuss as you work.  I'm also available by email or appointment if you
+would like to get feedback or do a dry-run of your talk. \\
+\textbf{References:} Include references on your slides where appropriate and list them on the last slide in your presentation slides. \\
+\textbf{General guideline:} it is often more compelling to discuss a few
+sub-topics that you know well, versus putting lots of content that is glossed
+over / simply read off your slides.
+
+\vspace{1em}
+
+\textbf{During presentations:} everyone should answer the following questions
+for each talk; your responses will be given to the presenter.  Printed forms
+will be provided on the day of the presentation.
+\setlist{nolistsep}
+\begin{itemize}[noitemsep]
+    \item What's one thing you learned and/or enjoyed?
+    \item What's one strength of the presentation that aided clarity, engagement?
+    \item If you were to give the same talk, what would you change to convey
+        the ideas more clearly?
+\end{itemize}
+Come ready to ask questions during and after each talk; these will count for
+participation.  Any kind: ``I didn't understand your sentence just now'',
+asking for more information, informed disagreement, etc.~will count.
+
+\vspace{1em}
+
+\textbf{Grading:} 18 \% of your final grade (two lab scores).  $8\%$ for the presentations, and rest $8\%$ for your participation (This is excluding the $10\%$ overall participation points)
+
+Content: 75\%
+\setlist{nolistsep}
+\begin{itemize}[noitemsep]
+%\itemsep0em
+\item Presenter [ \underline{\hspace{5mm}} ] introduce(s) and describe(s) topic
+at level appropriate to this class
+\item Presenter [ \underline{\hspace{5mm}} ] explain(s) extent of and
+limitations on our knowledge on the topic, including data/observations
+underlying knowledge
+\item Presenter [ \underline{\hspace{5mm}} ] provide(s) context by drawing
+connections to, e.g., different areas of astronomy, concepts from lab or
+lecture, other areas of science, areas outside of science, etc.
+\item Presenter chooses and cites appropriate references (i.e., goes beyond
+Wikipedia and popular press releases).  Presenter submits reference list.
+\end{itemize} {\small [ \underline{\hspace{3mm}} ] = easily and concisely (4), sufficiently (3),
+is somewhat able to (2), struggles to or cannot (1)
+}
+
+Delivery: 25\%
+\setlist{nolistsep}
+\begin{itemize}[noitemsep]
+%\itemsep0em
+\item Presentation has a logical flow that audience can [ \underline{\hspace{5mm}} ] follow
+\item Presentation aids (slides or boardwork) are [ \underline{\hspace{5mm}} ] understood by audience
+\item Presenter speaks clearly, faces audience and makes (or approximates) eye
+contact
+\item Presenter can [ \underline{\hspace{5mm}} ] address reasonable audience questions
+\item Presenter stays within allotted time
+\end{itemize}
+{\small [ \underline{\hspace{3mm}} ] = easily (4), sufficiently (3), somewhat (2), barely or not (1)}
+
+{\small Adapted from Am.~Astron.~Soc.~Chambliss and other rubrics}
+
+\newpage\pagebreak
+
+\subsection*{Possible topics}
+
+A not-comprehensive list of possible topics are listed below. You can choose something
+not listed, so long as it's within the realm of astronomy, our solar system, planets,
+exoplanets, and stars.  It should be something you haven't covered in depth in
+class or this lab.
+
+I recommend you go one step deeper for most of the below suggestions.
+Good topic: ``The Great Red Spot and other storms, vortices, and zonal flows on
+Jupiter''.
+Not-as-good topic: ``Gas giant atmospheres''.
+This will help both you and me determine whether your topic is well-suited for
+a 10--13min presentation.
+
+\begin{itemize}[noitemsep]
+    \item Solar system planets (including Earth)
+        \begin{itemize}[noitemsep]
+            \item surface geology and chemistry, prospects for life
+            \item atmospheres, climate
+            \item magnetospheres, magnetic field, aurora
+            \item rings and moons
+            \item Earth: formation of the Moon
+        \end{itemize}
+    \item Smaller solar system bodies
+        \begin{itemize}[noitemsep]
+            \item Asteroids (incl. Ceres)
+            \item Comets (incl. Halley’s Comet)
+            \item Kuiper Belt Objects (incl. Pluto)
+        \end{itemize}
+    \item Sun
+        \begin{itemize}[noitemsep]
+            \item Interior structure, nuclear fusion, chemistry
+            \item Birth, life, and death
+            \item Deeper exploration of: sunspots, magnetic reconnection,
+                flares and CMEs, tornados
+            \item Solar neutrinos
+            \item Helioseismology
+        \end{itemize}
+    \item Planet/star formation
+        \begin{itemize}[noitemsep]
+            \item Solar system formation and history; meteorites
+            \item Age of the solar system
+            \item Proto-planetary disks
+            \item Planet and planetesimal formation
+            \item Brown dwarfs
+            \item Star formation (very broad, you'll have to narrow further)
+        \end{itemize}
+    \item Exoplanets and exo-objects
+        \begin{itemize}[noitemsep]
+            \item Types of exoplanets: size, mass, composition.  Rocky and
+                gaseous planets.
+            \item Exoplanet atmospheres, chemistry
+            \item Exoplanet detection methods (choose one) and future missions
+        \end{itemize}
+    \item Spacefaring; Search for Extraterrestrial Intelligence (SETI)
+        \begin{itemize}[noitemsep]
+            \item Astrobiology, chemistry; the habitable zone
+            \item Speciation and extinctions on Earth
+            \item Energy usage, Dyson spheres
+            \item Communication and signal detection; candidate SETI signals
+            \item Space travel; 
+        \end{itemize}
+    \item Telescopes and spacecraft
+        \begin{itemize}[noitemsep]
+            \item Ground- versus space-based telescopes
+            \item Specific missions/projects: Gemini Planet Imager, Hubble,
+                Kepler, TESS (telescopes); Curiosity, OSIRIS-Rex, Dawn, Deep
+                Impact, Rosetta/Philae (robots/probes); Juno, Cassini, New
+                Horizons, Voyager (orbiters and fly-by spacecraft); many
+                others.
+            \item NASA budget, mission, proposals.  How funding decisions
+                are made.
+        \end{itemize}
+\end{itemize}
+
+Other options (equally encouraged):
+\begin{itemize}
+    \item Present a scientific paper.  I recommend looking at the Daily Paper
+        Summaries on Astrobites (\url{https://astrobites.org/}).  This is a
+        blog that summarizes scientific papers at an introductory level;
+        summaries are written by astro graduate students and aimed for
+        undergrad/grad students alike.
+        Other sources of brief, accessible scientific papers include Nature
+        (\url{https://www.nature.com/}), Nature Astronomy
+        (\url{https://www.nature.com/natastron/}), and
+        Science (\url{https://www.sciencemag.org/}).
+        For popular press that can direct you to interesting papers, consider:
+        \url{https://www.quantamagazine.org/physics} or
+        \url{https://www.scientificamerican.com}.
+
+    \item Biographical study of a famous astronomer or planetary scientist (you can choose your own or from the list below!).
+        If you do this, choose at least one scientific contribution to
+        emphasize.
+        \begin{itemize}[noitemsep]
+            \item Galileo Galilei
+            \item Johannes Kepler
+            \item Caroline Herschel 
+            \item Annie Maunder 
+            \item Annie Jump Cannon
+            \item Cecilia Payne-Gaposchkin 
+            \item Carl Sagan
+            \item Jill Tarter 
+            \item Sara Seager
+            \item Vera Rubin
+            \item Andrea Mia Ghez 
+        \end{itemize}
+\end{itemize}
+
+\end{document}

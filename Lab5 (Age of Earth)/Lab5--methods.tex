@@ -1,0 +1,138 @@
+\documentclass[12pt]{article}% uses letterpaper by default
+
+%---------- Uncomment one of them ------------------------------
+\usepackage[includeheadfoot, top=1in, bottom=1in, hmargin=1in]{geometry}
+
+% \usepackage[a5paper, landscape, twocolumn, twoside,
+%    left=2cm, hmarginratio=2:1, includemp, marginparwidth=43pt, 
+%    bottom=1cm, foot=.7cm, includefoot, textheight=11cm, heightrounded,
+%    columnsep=1cm, dvips,  verbose]{geometry}
+%---------------------------------------------------------------
+\usepackage{fancyhdr}
+\renewcommand{\footrulewidth}{0.4pt}% default is 0pt
+\usepackage{verbatim}
+\usepackage{url}
+\usepackage{cancel}
+\pagestyle{fancy}
+\usepackage{graphicx}
+\usepackage{setspace}
+\singlespacing
+%\doublespacing
+%\onehalfspacing
+%\newcommand{\exercisename}{}
+\usepackage{varwidth}
+
+\newcommand{\degrees}{\ensuremath{^\circ}}
+\newcommand{\arcmin}{\ensuremath{'}}
+\newcommand{\arcsec}{\ensuremath{"}}
+\newcommand{\hours}{\ensuremath{^\mathrm{h}}}
+\newcommand{\minutes}{\ensuremath{^\mathrm{m}}}
+\newcommand{\seconds}{\ensuremath{^\mathrm{s}}}
+
+\newcommand{\s}[0]{\phantom{i}} %sets up \s command
+\newcommand{\m}[0]{\phantom{abcde}} %sets up \m command
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}} %sets up \e command
+\setlength{\parindent}{0.2in} %new paragraph indent
+\usepackage{indentfirst} % indent the first paragraph of a section
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\lhead{Astronomy Lab I}
+\rhead{Fall 2021}
+
+\cfoot{\thepage}
+
+\pagenumbering{gobble}
+
+\begin{document}
+
+\section*{The Age of the Sun}
+
+One way to circumvent the difficulty of determining the age of the Earth itself is to postulate that it cannot be older than the Solar System. 
+In particular, it cannot be older than the Sun.
+As we know, the Sun is emitting energy, and this energy must have a source. 
+We can consider a few possible sources and determine how long they would last to find a limit for the age of the Sun. 
+Some numbers that you may find useful (the ``$\odot$'' represents the Sun):
+
+\begin{itemize}
+    \item 1 Solar Mass: $\mathrm{M_\odot = 1.99 \times 10^{30}~kg}$
+    \item 1 Solar Luminosity: $\mathrm{L_\odot = 3.85 \times 10^{26}~W=3.85 \times 10^{26}~J/s}$
+    \item 1 Solar Radius: $\mathrm{R_\odot = 6.96 \times 10^8~m}$
+    \item mass of a single hydrogen nucleus: $\mathrm{m_H = 1.67 \times 10^{-27}~kg}$
+    \item Energy from gasoline combustion = $4.73 \times 10^7$ J/kg
+    \item Newton's gravitational constant $G = 6.67 \times 10^{-11}~\mathrm{\frac{N*m^2}{kg^2}}$
+\end{itemize}
+
+\begin{enumerate}
+    \item Suppose the Sun is a huge ball of fire; in particular a giant globe of gasoline.  
+    How long could it burn at its current luminosity before it was out of gas? 
+    [Note: technically this process needs oxygen, but let's just ignore that for now]. 
+
+    \item Any massive system has gravitational potential energy. 
+    This energy for the Sun is (up to factors of order unity) 
+    $$E_g = \frac{GM^2}{R}.$$
+    Suppose that the Sun's luminosity comes only from the release of this energy as it contracts. 
+    How long could gravitational energy sustain its current luminosity? 
+    This is called the Kelvin-Helmholtz timescale; stars \textit{do} radiate by this mechanism as they form from clouds of gas.  
+
+    \item Nuclear fusion of hydrogen ($\mathrm{H + H \rightarrow He + \gamma}$; the $\gamma$ represents a released photon) is the actual mechanism for the Sun's energy production at this stage of its life. 
+    Each fusion reaction releases $3.957 \times 10^{-12}$ Joules of energy. 
+    Assuming that the sun is composed entirely of hydrogen (this is basically true), and that 10\% of its mass can be converted to helium before the core is depleted, how long can the Sun shine in this way at its current luminosity? 
+    \item What do you think contributes the most error to these calculations? Are these upper or lower bounds on the age of the Earth?
+\end{enumerate}
+
+\newpage
+\section*{The Age of the Oceans}
+
+In 1899 John Joly calculated the age of the oceans in an amusing way. 
+We know the oceans are full of salt, but rivers carry only a little. 
+By computing the amount of time it would take for all the rivers in the world to salinate the ocean, one can arrive at an age for the oceans. 
+Use the following information to set a limit on the age of the oceans. 
+Is it an upper or lower limit? 
+List at least one assumption in you calculation that is clearly false and state whether correcting it will make your age larger or smaller.  Which assumption do you think introduces the most error?
+
+\begin{itemize}
+    \item The salinity of the oceans is approximately 35 g salt per kg water. 
+    \item Fresh water from rivers contains about 0.5 g salt per kg water.
+    \item The Amazon River has the largest water flow of any river in the world (larger than the next seven rivers combined) at 209,000 $\mathrm{m^3/s}$ and contributes about $1/5$ the total river flow into the oceans. 
+    \item The total volume of the Earth's oceans, seas and bays is $1.332 \times 10^{18}~ \mathrm{m^3}$ (which is about $1/750$ the Earth's volume).
+    \item 1000 kg of water has a volume of 1000 L or 1 ${\rm m^3}$
+\end{itemize}
+
+
+\newpage
+\section*{Radiometric Dating}
+
+Some atoms are unstable and will radioactively decay given enough time. 
+Frequently they will emit either a Helium nucleus (2 protons and 2 neutrons, also called an $\alpha$ particle) or an electron (also called a $\beta^{-}$ particle, the emission of which converts a neutron into a proton). 
+In either case the atomic number (number of protons), and therefore the element, changes. 
+If we know the original concentrations of the elements in a sample, we can look for the number of decay products and infer an age since the object was formed. 
+This is simplified because the rate of (most) decays is not altered by temperature, pressure, radiation environment or much of anything else as far as we can tell. 
+The resulting atom is called the ``daughter'' nucleus.
+
+While it is not possible to predict when an unstable atom will decay, the statistical properties of radioactivity assure us that for a sample of macroscopic size we can accurately determine when half the material will have decayed. 
+This is the ``half-life'', $t_{1/2}$. It is related to the mean lifetime $\tau$ by 
+$t_{1/2} = \tau * \ln(2) = 0.693 \tau.$
+The decay is exponential, such that
+$$N(t) = N_0 e^{-t/\tau} = N_0 2^{-t/t_{1/2}}$$
+where $N(t)$ is the number of atoms remaining after time $t$ and $N_0$ is the initial number of atoms.
+Note that the ``$e$'' is Euler's constant, equal to $\approx 2.71828$, and ``$\ln$'' is the natural log, which is the inverse of the exponential function. This means that $e^{\ln(x)} = \ln(e^{x}) = x$.
+
+Ernest Rutherford first proposed that one might measure the age of the Earth using this information in 1905. 
+Since then it has been done using many different decay progenitors and products for many different samples. 
+Rocks on Earth are frequently remelted, reprocessed, or reheated which cause their isotope ratios to change, so the best measurements come from meteorites which have been undisturbed since the formation of the Sun and planets. 
+%Some common isotopes to use for this are Samarium-147 and Neodymium-143, Potassium-40 and Argon-40, and Uranium-234 and Thorium-230. 
+%Carbon dating uses a similar process but since Carbon-14 has a short half-life (5,730 years) and is produced in the atmosphere, not supernovae, it is not useful for determining the age of the Earth. 
+
+\begin{enumerate}
+    \item Rearrange the equation for $N(t)$ (in the $\tau$ form) to solve for $D(t)$, the number of daughter atoms. 
+    [Hint: you may notice that $D(t)$ doesn't appear at all in that equation, which means you must put it in yourself. Don't forget $D_0$, the initial sample!].% a term for the initial number of daughters, $D_0$, in the sample!]. %How does $D(t)$ relate to $N(t)$ and $N_0$? 
+    %Don't forget a term for the initial number of daughters, $D_0$, in the sample!].
+    \item Zircon (the diamond simulant cubic zirconia is derived from this mineral) is excellent for radiometric dating since it is extremely resilient, chemically inert, and strongly rejects lead inclusions from its crystal structure, so we can assume all the Pb found in it is radiogenic (from decay processes). 
+    Consider the result of the decay series $\mathrm{^{238}U} \rightarrow \mathrm{^{206}Pb}$, with a half-life of 4.47 billion years. 
+    I have brought you a sample of Zircon from Jack Hills in western Australia and your mass spectrometer shows that the ratio $\mathrm{ ^{206}Pb/^{238}U}$ is 0.9796; how old is it? [Hint: What ratio is this in terms of variables? How can you use the equations you have to recover that ratio?].
+\item What do you think is the largest source of error in your calculation?
+\end{enumerate}
+
+\end{document}
+

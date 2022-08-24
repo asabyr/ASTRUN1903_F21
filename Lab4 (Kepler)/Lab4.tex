@@ -1,0 +1,116 @@
+\documentclass[12pt]{article}% uses letterpaper by default
+
+%---------- Uncomment one of them ------------------------------
+\usepackage[includeheadfoot, top=1in, bottom=1in, hmargin=1in]{geometry}
+
+% \usepackage[a5paper, landscape, twocolumn, twoside,
+%    left=2cm, hmarginratio=2:1, includemp, marginparwidth=43pt, 
+%    bottom=1cm, foot=.7cm, includefoot, textheight=11cm, heightrounded,
+%    columnsep=1cm, dvips,  verbose]{geometry}
+%---------------------------------------------------------------
+\usepackage{fancyhdr}
+\renewcommand{\footrulewidth}{0.4pt}% default is 0pt
+\usepackage{verbatim}
+\usepackage{url}
+\usepackage{cancel}
+\pagestyle{fancy}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\singlespacing
+\usepackage{varwidth}
+
+\usepackage{indentfirst} % indent the first paragraph of a section
+\usepackage{amsmath}
+\usepackage{epigraph}
+
+\lhead{Astronomy Lab I}
+
+
+\rhead{Fall 2021}
+\cfoot{\thepage}
+
+\begin{document}
+
+\begin{center}
+    \LARGE Lab 4: Galilean Moons and and Kepler's third Law
+\end{center}
+
+\section*{Background}
+On January 7th, 1610, Galileo Galilei made a remarkable discovery. He turned his crude telescope to look at Jupiter, which was high in the Eastern sky shortly after sundown, and he discovered three points of light in close proximity to the planet, points of light that were not visible to the naked eye. At first he just thought they were ordinary background stars, but when he looked again the following night they weren't where he expected them to be (with the same configuration but farther to the east). Instead they had a different configuration from the previous evening and they remained near the planet. Upon repeated observations he saw that the points of light appeared to dance around the planet, and about a week after his first observation he identified a fourth point of light. It was apparent to him then that these were not background stars at all, but that they had to be associated with the planet itself.
+
+(Side note: ancient Chinese astronomer/astrologer Gan De \emph{may} have observed Ganymede by eye in BCE 364, although he thought it was a ``small red star''.)
+
+Now at this time Copernicus' model of the Solar System, with the Sun at the center and the planets orbiting around it, was not yet accepted as fact. The Catholic Church deemed the theory heretical. But Galileo's discovery provided powerful support for the Copernican heliocentric model. These points of light around Jupiter clearly did not orbit the Earth, in violation of the geocentric cosmology. But they also clearly did not orbit the Sun directly the way the planets do. Rather, they orbited Jupiter, as if Jupiter were its own small solar system.
+
+The moons Galileo discovered are now called Io, Europa, Callisto, and Ganymede. Collectively they are known as the Galilean moons in honor of Galileo.
+
+Today we are going to replicate Galileo's observations using the program Stellarium. We will measure how the positions of the moons change from night to night, derive the orbital periods and semi-major axes, and measure the mass of Jupiter using Kepler's Third Law! 
+
+\section*{Observing Jupiter}
+\begin{itemize}
+    \item Open the program Stellarium on your computer. Take your mouse to the left side of the screen and you'll see a series of options pop up. Click on "Configuration Window." Click on "Plugins" and select "Angle Measure" from the list on the left. Check the box "Load at startup."
+
+    \item Now, re-open the program Stellarium on your computer. The sky as it currently appears will show up on your screen. But we don't want to observe Jupiter \emph{today} (although we could do this). Instead, we will call up the sky as it appeared the night Galileo first observed Jupiter with his telescope.
+
+    \item Once again, take your mouse to the left side of the screen and you'll see a series of options pop up. Click on the icon that looks like a clock that says ``Date/Time Window''. In the window that appears, \textbf{set your date to 1610/1/7}. The sky will now appear as it did on that historic evening. If it's still light outside advance the clock by an hour or two.
+
+    \item Drag your mouse on the screen to move about the sky (you can also use the arrow keys on the keyboard). Locate the Moon  Nearby, you'll see Jupiter. It should be labeled, but if it's isn't, simply hit `p' and the name should appear. If a line is passing through it, that's indicating Jupiter's orbit. Hit 'o' to turn that off if it's showing up.
+
+    \item Now click on Jupiter to select it. A slowing rotating red cross will illuminate around Jupiter and a number of details about the planet will show up on the upper left side of your screen. The piece of information you will need is the distance (NOT distance from the sun) and its apparent diameter. Write that down, you'll need it later.
+
+    \item To make our observations you'll want to zoom in on the planet. You can press ``Command'' and use the up/down arrows to zoom in and out. Put Jupiter in the center of your screen and zoom in on the planet. You'll notice the moons, but also that as you zoom in Jupiter is moving across your screen. That's the rotation of the Earth! Obviously this will make observations difficult, as it would have for Galileo. Let's get rid of that and simulate what it's like making this observation with a modern telescope with tracking capabilities. With Jupiter selected, hit the spacebar to track the object.
+\end{itemize}
+
+\subsection*{Measurements}
+It's time to start taking measurements. In your notebook create a table. Create a column for each of the four Galilean moons, with 20 rows to record your observations. These will be values that we measure for each subsequent night. This may take a while, but this is the bulk of this lab so be as careful as you can taking measurements. 
+
+Zoom in to Jupiter so that you can see all four moons on your screen. Depending on your settings you may see a good number of other stars in your field of view, but the moons should be labeled. Ask for help if you're unable to see the labels. Now type `Command-A' to enable the angular measurement tool. This will allow you to measure the separation of each moon from Jupiter.
+
+\begin{enumerate}
+    \item For each moon, \textbf{use the angular measurement tool to measure from the center of the Moon to the center of Jupiter.} The angular distance between the two should show up in blue in the vicinity of the distance bar. Note that the measurement is written in terms of degrees, arcminutes and arcseconds (arcminutes have a single $'$ mark while arcseconds have $''$). 
+    \item To make our lives a bit easier later on let's convert these measurements so that instead of expressing these separations in both arcminutes and arcseconds they're just in arcminutes. What to do with those pesky arcseconds? Simply divide them by 60 to get decimals. So if my measurement was $3' 52''$, I can convert that into $3.87'$. \textbf{Make sure you can reproduce this calculation.} \textbf{Record these converted values in the table, and also make note of whether the moon appears to the right or left of the planet}, as we will want this information later on. Do this for each of the four moons. If you are unable to see one of the moons, try zooming in or zooming out, but it's also possible that the moon may be hidden behind the planet on this particular day, in which case the angular separation is roughly 0.
+    \item When you have recorded the angular separation of each Moon for January 7th, it's time to move on to the next day. Hit the `=' key to skip ahead 24 hours. You can use `-' to go back 24 hours. You should notice that Jupiter has moved in the course of that time. You'll want to click on it again and press `Spacebar' to re-center Jupiter on your screen. Repeat this process until you've filled up your table. Make sure you aren't skipping ahead too many days! You'll want to keep an eye on the date/time at the bottom of your screen to make sure your measurements are lining up with the appropriate day in your log.
+\end{enumerate}
+
+\subsection*{Data analysis}
+After you have completed your table it's time to analyze your hard won data. What we want to know is, a) how far away is each moon from the planet? b) what is the orbital period of each moon? and c) What is the Mass of Jupiter? Remarkably we can do all of these things from the observations you just made.
+
+\textbf{Construct a plot of your data, one for each moon.} On the x-axis you have the date of observation (you can just write 1, 2, 3, etc for day 1, 2, 3...). On the y-axis plot the angular separation. Recall that we wrote down whether the moon appeared on the left or right of the planet. Let one of these designations correspond to positive values and the other correspond to negative values. To select an appropriate scale for your y-axis look at the maximum reading that you took (positive or negative) and go from there, maybe give it a little extra room to play with. The units of your y-axes should be in arcminutes.
+
+Once you have completed each plot you should notice the pattern looks like a sinusoid (i.e. a sine wave or cosine wave). Since the Galilean moons have very low eccentricity (the orbits are almost perfectly circular) the sine wave should look pretty even.
+\textbf{Draw a smooth sinusoid through the data} There are a few very important considerations here: 
+\begin{itemize}
+    \item The maximum elongation that you measured (maximum separation of the planet and moon) is NOT necessarily the farthest the moon ever gets from the planet. Why not? We're only measuring once a night, so it's very possible the moon got farther away from Jupiter after your measurement and came back towards Jupiter again before your next measurement the following night.
+    \item The sinusoid should NOT pass through every single line perfectly. Why not? Because your data is imprecise! Hopefully though, your measurement error is random and there will not be a systematic offset.
+    \item Make sure you draw a curve with a consistent period and amplitude!  Otherwise it's not a sinusoid.
+\end{itemize}
+
+\noindent \textbf{Based on your plots, answer the following questions:}
+\begin{enumerate}
+    \item What is the period of each moon's orbit? Be as precise as you can. 
+    \item Did you have a hard time drawing the sinusoid for any of the moons?  Why do you think this is?
+    \item Based on what you know about how orbiting objects move, rank these moons from closest to farthest from Jupiter.
+    \item Based on the plots you've generated, what is the maximum separation of each moon from Jupiter? Remember that it is not necessarily the largest measurement you made!  
+    \item Are your results from question 2 consistent with your answer in question 4?
+    \item Use the distance to Jupiter (you wrote it down at the beginning of the lab) together with the maximum angular separation to calculate the semimajor axis of each moon's orbit.  Make sure to keep track of your units.
+\end{enumerate}
+
+At long last we are ready to calculate the mass of Jupiter. Recall Kepler's Third Law of planetary motion.  (You may or may not have seen this in your classes).
+\begin{equation}
+    \frac{P^2}{a^3} = \frac{4 \pi^2}{GM}
+\end{equation}
+This is a form of the law that applied when the masses of the satelites (the moons) are much smaller that what they are orbiting.  In this case, $P$ is the period of a moon's orbit, $a$ it's it's semimajor axis, and $M$ is Jupiter's mass.  \textbf{Solve for (isolate) $M$}.  Using Kepler's third law, \textbf{compute the mass of Jupiter 4 times, using your values for each moon.} You'll need to convert your moon periods from days to seconds, but you've already calculated the moons' semi-major axes in meters so you're good to go there. Now note that the Universal Gravitational constant is $G = 6.67 \times 10^{-11}$ m$^3$/kg s$^{2}$. \\
+
+The actual mass of Jupiter is $1.9 \times 10^{27}$ kg. How close were you? \textbf{Take the average of your four values for $M_J$ and calculate the relative error.}
+
+\section*{Conclusion}
+\begin{itemize}
+    \item What was something new you learned today?
+    \item What was your most and least favorite part of lab?
+    \item Was anything left unclear?
+    \item Ask a question.
+\end{itemize}
+\end{document}
+
